@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>European Institute Quiz</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="./eli logo.jpg" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="logoLogin"></div>
+
+        <div id="loginPanel" class="card login-card">
+            <h2>Login Quiz Test</h2>
+            <p>Please enter your details to login</p>
+            <input type="text" id="name" class="input" placeholder="Full Name e.g : Hassan Khan" autocomplete="off"
+                required="" />
+            <input type="text" id="nic" class="input" placeholder="NIC Number e.g : 42201-9198074-9" autocomplete="off"
+                required="" />
+            <input type="password" id="password" class="input" placeholder="Password e.g : 1234" autocomplete="off"
+                required="" />
+            <button id="loginBtn" class="btn primary" style="width:100%;">Login</button>
+            <div id="loginError" class="error"></div>
+            <section>
+                <footer>
+                    &copy; 2025 European Institute of Education<br>
+                    Designed by <a href="./cv hassan khan.pdf" target="_blank" style="color:var(--accent)">Hassan
+                        Khan</a>
+                </footer>
+            </section>
+        </div>
+
+        <div id="quizPanel" style="display:none;">
+            <header>
+                <div class="brand">
+                    <div class="logo"></div>
+                    <div>
+                        <div class="title">Student Course Complete CIT</div>
+                        <div class="subtitle">MS Office Quiz (Word, Excel, PowerPoint)</div>
+                    </div>
+                </div>
+                <div class="controls">
+                    <div id="topTimer" class="timer">40:00</div>
+                </div>
+            </header>
+            <main>
+                <div class="card quiz-card">
+                    <div class="timer small" id="timerNote">Timer will turn red when 5 minutes left</div>
+                    <div class="progress"><i id="progBar"></i></div>
+                    <div class="info">Questions: <strong>40</strong></div>
+                </div>
+                <div class="card quiz-card" id="quizArea">
+                    <div id="questionPanel">
+                        <div class="question-number" id="qnum"></div>
+                        <div class="question-text" id="qtext"></div>
+                        <div class="options" id="options"></div>
+                        <div class="bottom">
+                            <button id="prevBtn" class="btn secondary">Previous</button>
+                            <button id="nextBtn" class="btn primary">Next</button>
+                        </div>
+                    </div>
+                    <div id="resultPanel" style="display:none;">
+                        <div class="result">
+                            <h2 id="congrats"></h2>
+                            <p class="small-m" id="scoreText"></p>
+                            <p class="small-m" id="counts"></p>
+                            <button id="restart" class="btn primary">Restart Quiz</button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer>
+                Good luck — give your best!<br>
+                &copy; 2025 European Institute of Education<br>
+                Designed by <a href="./cv hassan khan.pdf" style="color:var(--accent)">Hassan Khan</a>
+            </footer>
+        </div>
+    </div>
+    <script src="quiz.js"></script>
+</body>
+
+</html>
